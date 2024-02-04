@@ -1,4 +1,5 @@
 # Crowdfunding ETL Project
+
 ## Project Overview
 The Crowdfunding ETL (Extract, Transform, Load) project aimed to analyze and organize crowdfunding data for a comprehensive understanding of various campaigns. The project was divided into four main parts, each focusing on a specific aspect of data handling and organization. Here's an overview of what was achieved in each part:
 
@@ -19,34 +20,48 @@ In this final step, SQL statements were crafted to define the structure of four 
 ### CSV Files (Resources Folder):
 
 category.csv
+
 subcategory.csv
+
 campaign.csv
+
 contacts.csv
 
 ### Excel Files (Resources Folder):
 
 contacts.xlsx
+
 crowdfunding.xlsx
 
 ### Main Files (Main Folder):
 
 QuickDBD Diagram: Illustrates the Crowdfunding Database schema.
+
 ETL_Mini_Project_MAIN.ipynb: Jupyter Notebook file containing Python code for the entire ETL process.
+
 Crowdfunding_db_schema : postgresSQL file containing table schema
 
 # Branches
 Main Branch
+
 Qazi Fabia Hoq
+
 Gurans Limbu
+
 Laarnie Palete
+
 Danniel Morris
 
 # Project Contributors
 
 Qazi Fabia Hoq
+
 Gurans Limbu
+
 Laarnie Palete
+
 Danniel Morris
+
 For further details, inquiries, or collaboration opportunities, please contact the project contributors.
 
 # Reference
