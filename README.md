@@ -1,75 +1,102 @@
 # Crowdfunding ETL Project
 
-## Project Overview
-The Crowdfunding ETL (Extract, Transform, Load) project aimed to analyze and organize crowdfunding data for a comprehensive understanding of various campaigns. The project was divided into four main parts, each focusing on a specific aspect of data handling and organization. Here's an overview of what was achieved in each part:
+---
 
-## Part 1: Create the Category and Subcategory DataFrames
-In this phase, the focus was on splitting the 'category & sub-category' column into separate 'category' and 'subcategory' columns. The unique categories and subcategories were identified, and two DataFrames, 'category_df' and 'subcategory_df', were created. These DataFrames were then exported as CSV files ('category.csv' and 'subcategory.csv').
+## Project Description
 
-## Part 2: Create the Campaign DataFrame
-For campaign details, including company name, blurb, goal, pledged amount, outcome, backers count, country, currency, launch date, and deadline, the 'category' and 'subcategory' columns were linked to unique category and subcategory IDs. After data type conversion, column renaming, and formatting of date columns, the resulting DataFrame ('campaign_df') was merged with category and subcategory DataFrames. Unnecessary columns were dropped, and the final DataFrame was exported as a CSV file ('campaign.csv').
+The Crowdfunding ETL project focused on organizing and analyzing crowdfunding campaign data to provide a clear and structured view of various campaigns. The objective was to extract meaningful insights by efficiently processing raw data into a well-designed database structure that supports further analysis and reporting.
 
-## Part 3: Create the Contacts DataFrame
-This phase involved extracting information from the 'contact_info' column, initially in JSON format. The 'contact_info_df' DataFrame was created by converting this information into lists of values and assigning them to appropriate columns like 'contact_id', 'name', and 'email'. Additional data cleaning steps included splitting the 'name' column into 'first_name' and 'last_name'. The final DataFrame was reordered and exported as a CSV file ('contacts.csv').
+---
 
-## Part 4: Create the Crowdfunding Database
-In this final step, SQL statements were crafted to define the structure of four tables: 'contacts', 'category', 'subcategory', and 'campaign'. Primary and foreign key constraints were set to establish relationships between these tables. The SQL script also included the creation of the 'contacts' and 'category' DataFrames from corresponding CSV files. A QuickDBD diagram visualizing the Crowdfunding Database schema was created and is available in the main branch.
+## Who Will Benefit and Why?
 
-## Project File Structure
+This project benefits data analysts, database administrators, and crowdfunding platform managers by offering a clean, organized dataset and database schema. With this structured data, stakeholders can better understand campaign trends, track performance metrics, and make informed decisions to improve crowdfunding strategies.
 
-### CSV Files (Resources Folder):
+---
 
-category.csv
+## Dataset Description
 
-subcategory.csv
+The dataset originates from edX Boot Camps LLC and is designed for educational use. It contains detailed information about crowdfunding campaigns, including categories, campaign details, contact information, and dates related to each campaign.
 
-campaign.csv
+---
 
-contacts.csv
+## How It Was Done
 
-### Excel Files (Resources Folder):
+The project was executed in four key phases:
 
-contacts.xlsx
+1. **Category and Subcategory Extraction:**
+   The combined 'category & sub-category' field was split into distinct 'category' and 'subcategory' columns. Unique values were identified and saved into separate DataFrames (`category_df` and `subcategory_df`), which were then exported as CSV files.
 
-crowdfunding.xlsx
+2. **Campaign DataFrame Creation:**
+   Campaign-related attributes such as company name, goal, pledged amount, outcome, backers, country, currency, launch, and deadline dates were organized. Category and subcategory IDs were linked to campaigns. Data types were converted, date columns formatted, and unnecessary columns removed. The resulting `campaign_df` was exported as a CSV file.
 
-### Main Files (Main Folder):
+3. **Contacts DataFrame Creation:**
+   Contact information stored as JSON was extracted, transformed into tabular format, and cleaned. The 'name' field was split into first and last names, with the final DataFrame (`contact_info_df`) reordered and exported as CSV.
 
-QuickDBD Diagram: Illustrates the Crowdfunding Database schema.
+4. **Database Schema and SQL Setup:**
+   SQL scripts were written to create four tables — contacts, category, subcategory, and campaign — with appropriate primary and foreign key relationships. CSV data was loaded into corresponding tables, and a visual database schema was created using QuickDBD.
 
-ETL_Mini_Project_MAIN.ipynb: Jupyter Notebook file containing Python code for the entire ETL process.
+---
 
-Crowdfunding_db_schema : postgresSQL file containing table schema
+## Key Findings
 
-# Branches
-Main Branch
+* **How were categories organized?**
+  The original combined category data was efficiently separated into distinct categories and subcategories, enabling easier filtering and analysis.
 
-Qazi Fabia Hoq
+* **What was achieved with campaign data?**
+  Campaign details were linked to unique category IDs, allowing cross-referencing between campaigns and their classifications.
 
-Gurans Limbu
+* **How was contact data handled?**
+  Complex JSON contact info was successfully transformed into clean, relational data with separate columns for first and last names.
 
-Laarnie Palete
+* **What database structure was created?**
+  A normalized relational database schema was designed, ensuring data integrity and relationships between contacts, campaigns, categories, and subcategories.
 
-Danniel Morris
+---
 
-# Project Contributors
+## Conclusion
 
-Qazi Fabia Hoq
+This project successfully transformed raw crowdfunding data into a structured, relational database, facilitating easier access and analysis. The clean separation of categories, campaigns, and contacts improves data clarity and usability for downstream applications.
 
-Gurans Limbu
+---
 
-Laarnie Palete
+## Recommendations
 
-Danniel Morris
+Maintaining consistent data formats and expanding the schema to include additional campaign metrics or user interactions could further enhance insights. Integrating automated ETL pipelines would improve data freshness and scalability.
 
-For further details, inquiries, or collaboration opportunities, please contact the project contributors.
+---
 
-# Reference
-Data for this dataset was generated by edX Boot Camps LLC, and is intended for educational purposes only.
+## Project Contributors
 
+* Qazi Fabia Hoq
+* Gurans Limbu
+* Laarnie Palete
+* Danniel Morris
 
+---
 
+## Project Files
 
+**CSV Files:**
 
+* category.csv
+* subcategory.csv
+* campaign.csv
+* contacts.csv
 
+**Excel Files:**
 
+* contacts.xlsx
+* crowdfunding.xlsx
+
+**Main Files:**
+
+* QuickDBD Diagram (Database schema visualization)
+* ETL\_Mini\_Project\_MAIN.ipynb (Python ETL notebook)
+* Crowdfunding\_db\_schema.sql (PostgreSQL table schema)
+
+---
+
+## Reference
+
+Data generated by edX Boot Camps LLC for educational purposes only.
